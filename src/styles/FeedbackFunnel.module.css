@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.logoContainer {
+  margin-bottom: 40px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.introText {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.stepIndicator {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0070f3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+
+.starContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.starsRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.transitionContent {
+  padding: 20px;
+}
+
+.transitionGroup {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px; /* Set a minimum height to avoid abrupt changes */
+}
+
+.transitionWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-enter {
+  transform: translateY(100%);
+}
+
+.slide-enter-active {
+  transform: translateY(0);
+  transition: transform 1s ease-out;
+}
+
+.slide-exit {
+  transform: translateY(0);
+}
+
+.slide-exit-active {
+  transform: translateY(100%);
+  transition: transform 1s ease-in;
+}
+
+.contentContainer {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+}
