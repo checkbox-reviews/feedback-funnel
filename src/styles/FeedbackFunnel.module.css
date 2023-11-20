@@ -1,4 +1,7 @@
 .container {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +14,7 @@
 }
 
 .textarea {
+  font-family: 'Lato', sans-serif;
   width: 100%;
   min-height: 100px;
   padding: 10px;
@@ -23,7 +27,6 @@
 .introText {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1rem;
 }
 
 .stepIndicator {
@@ -33,34 +36,78 @@
 }
 
 .button {
-  padding: 10px 15px;
+  padding: 10px 40px;
   border: none;
   border-radius: 5px;
-  background-color: #0070f3;
+  background-color: #000000;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   color: white;
   cursor: pointer;
-  transition: background-color 0.2s;
-  margin-top: 20px;
+  margin-top: 10px;
+  align-self: flex-end;
+  /* This line will right-align the button */
 }
 
 .starContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
+  align-items: left;
+  margin: 20px 0 0px 0;
 }
 
 .starsRow {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: left;
 }
 
 .star {
-  font-size: 24px;
+  font-size: 44px;
   margin: 0 10px;
   cursor: pointer;
   transition: color 0.2s;
+}
+
+.starActive {
+  font-size: 44px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #FFD700;
+  transition: color 0.2s;
+}
+
+.reviewCard {
+  max-width: 484px;
+  border: 5px solid #ccc;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin: auto;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.businessName {
+  font-size: 28px;
+  margin: 5px;
+}
+
+.reviewLink {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #4285F4;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .transitionContent {
@@ -70,7 +117,8 @@
 .transitionGroup {
   position: relative;
   overflow: hidden;
-  min-height: 300px; /* Set a minimum height to avoid abrupt changes */
+  min-height: 300px;
+  /* Set a minimum height to avoid abrupt changes */
 }
 
 .transitionWrapper {

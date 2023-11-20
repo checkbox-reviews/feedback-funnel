@@ -6,20 +6,21 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 function FeedbackFunnel() {
+  const placeId = 'ChIJZWb8Oq0SK4gREp-PBWlz6EQ';
+  const googleReviewLink = `https://search.google.com/local/writereview?placeid=${placeId}`;
+  const imageUrl = 'https://lh3.googleusercontent.com/p/AF1QipOzbTMt3UHukWpur5m0ZnlmJM8S_6DG4EnfHwg2=s680-w680-h510'
+
   const [step, setStep] = useState(1);
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
-  const [recommendation, setRecommendation] = useState("");
 
-  const onFeedbackSubmit = (feedbackVal, recommendationVal) => {
+  const onFeedbackSubmit = (feedbackVal) => {
     setFeedback(feedbackVal);
-    setRecommendation(recommendationVal);
     setStep(2);
   };
 
   const onRate = (ratingVal) => {
     setRating(ratingVal);
-    setStep(3);
   };
 
   return (
@@ -42,39 +43,30 @@ function FeedbackFunnel() {
                   We value your feedback. Please share your experience and let
                   us know how we can improve.
                 </p>
-                <p className={styles.stepIndicator}>
-                  Step 1: Share your experience
-                </p>
+                {/* <p className={styles.stepIndicator}>
+                  Step 1: Rate our service
+                </p> */}
+                <StarRating onRate={onRate} />
+                {/* <p className={styles.stepIndicator}>Step 2: Share your experience</p> */}
                 <FeedbackBox onSubmit={onFeedbackSubmit} />
               </div>
             )}
-            {step === 2 && (
-              <div>
-                <p className={styles.stepIndicator}>Step 2: Rate our service</p>
-                <StarRating onRate={onRate} />
-              </div>
-            )}
-            {step === 3 &&
+            {step === 2 &&
               (rating < 4 ? (
                 <div>Thank you for your feedback. We will be in touch.</div>
               ) : (
                 <div>
                   <p>Thank you for the positive feedback!</p>
-                  <a
-                    href="https://www.google.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Leave a review on our Google Store
-                  </a>
-                  <span> or </span>
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Facebook Page
-                  </a>
+                  <div className={styles.reviewCard}>
+                    <div className={styles.reviewHeader}>
+                      <Image src={"/google.png"} alt="Google" width={50} height={50} />
+                      <h2 className={styles.businessName}>{"Georgeview Restaurent"}</h2>
+                    </div>
+                    <Image src={imageUrl} alt="Business Image" width={484} height={246} layout='responsive' />
+                    <a href={googleReviewLink} target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>
+                      Leave a review
+                    </a>
+                  </div>
                 </div>
               ))}
           </motion.div>

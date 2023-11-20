@@ -15,16 +15,14 @@ function StarRating({ onRate }) {
         {[...Array(5)].map((_, i) => (
           <span
             key={i}
-            className={`${styles.star} ${i < localRating ? styles.active : ""}`}
-            onClick={() => setLocalRating(i + 1)}
+            className={`${styles.star} ${i < localRating ? styles.starActive : ""}`}
+            onClick={() => handleRate(i + 1)}
           >
             {i < localRating ? "★" : "☆"}
           </span>
         ))}
       </div>
-      <button className={styles.button} onClick={() => onRate(localRating)}>
-        Next
-      </button>
+
     </div>
   );
 }
