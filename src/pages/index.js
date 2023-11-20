@@ -56,17 +56,21 @@ function FeedbackFunnel() {
                 <div>Thank you for your feedback. We will be in touch.</div>
               ) : (
                 <div>
-                  <p>Thank you for the positive feedback!</p>
-                  <div className={styles.reviewCard}>
-                    <div className={styles.reviewHeader}>
-                      <Image src={"/google.png"} alt="Google" width={50} height={50} />
-                      <h2 className={styles.businessName}>{"Georgeview Restaurent"}</h2>
+                  <p className={styles.introText}> Thank you for the positive feedback!</p>
+
+                  <a href={googleReviewLink} target="_blank" rel="noopener noreferrer" className={styles.reviewCard}>
+                    <div className={styles.reviewInvitation}>
+                      Please also review on Google! Every review helps!
                     </div>
-                    <Image src={imageUrl} alt="Business Image" width={484} height={246} layout='responsive' />
-                    <a href={googleReviewLink} target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>
-                      Leave a review
-                    </a>
-                  </div>
+                    <div className={styles.googleCard}>
+                      <div className={styles.reviewHeader}>
+                        <Image src={"/google.png"} alt="Google" width={40} height={40} />
+                        <h2 className={styles.businessName}>Georgeview Restaurant</h2>
+                      </div>
+                      <Image src={imageUrl} alt="Business Image" width={484} height={246} layout='responsive' />
+                      <div className={styles.reviewPrompt}>Leave a Review</div>
+                    </div>
+                  </a>
                 </div>
               ))}
           </motion.div>

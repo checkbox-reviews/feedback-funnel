@@ -1,11 +1,11 @@
 .container {
   font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   padding: 20px;
 }
 
@@ -15,6 +15,7 @@
 
 .textarea {
   font-family: 'Lato', sans-serif;
+  font-size: 18px;
   width: 100%;
   min-height: 100px;
   padding: 10px;
@@ -67,6 +68,7 @@
   margin: 0 10px;
   cursor: pointer;
   transition: color 0.2s;
+  user-select: none;
 }
 
 .starActive {
@@ -75,16 +77,38 @@
   cursor: pointer;
   color: #FFD700;
   transition: color 0.2s;
+  user-select: none;
 }
 
 .reviewCard {
   max-width: 484px;
-  border: 5px solid #ccc;
-  border-radius: 14px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
-  margin: auto;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.reviewCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reviewInvitation {
+  font-size: 20px;
+  text-align: left;
+  padding: 20px 20px 0px 20px;
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.googleCard {
+  background-color: #f1f1f1;
+  border: 4px solid #000;
+  border-radius: 4px;
+  margin: 20px;
 }
 
 .reviewHeader {
@@ -96,17 +120,16 @@
 }
 
 .businessName {
-  font-size: 28px;
-  margin: 5px;
+  font-size: 18px;
+  color: #202124;
+  margin: 0;
 }
 
-.reviewLink {
-  display: block;
-  text-align: center;
+.reviewPrompt {
   padding: 10px;
   background-color: #4285F4;
   color: white;
-  text-decoration: none;
+  text-align: center;
   font-weight: 600;
 }
 
