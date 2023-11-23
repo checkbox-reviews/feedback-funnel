@@ -1,7 +1,7 @@
 .container {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .textarea {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', serif;
   font-size: 18px;
   width: 100%;
   min-height: 100px;
@@ -25,8 +25,9 @@
 }
 
 .introText {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .stepIndicator {
@@ -46,8 +47,8 @@
   color: white;
   cursor: pointer;
   margin-top: 10px;
+  margin-right: -10px;
   align-self: flex-end;
-  /* This line will right-align the button */
 }
 
 .starContainer {
