@@ -26,7 +26,7 @@ function FeedbackFunnel() {
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>
-        <Image src="/logo.svg" alt="Company Logo" width={150} height={40} />
+        <Image src="/georgeview.jpeg" alt="Company Logo" width={300} height={100} />
       </div>
       <div className={styles.contentContainer}>
         <AnimatePresence mode="wait">
