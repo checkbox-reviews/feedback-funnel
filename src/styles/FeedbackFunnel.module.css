@@ -9,7 +9,12 @@
 }
 
 .logoContainer {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.logoContainer img {
+  width: auto;
+  height: 100px;
 }
 
 .textarea {

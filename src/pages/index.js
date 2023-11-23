@@ -25,8 +25,8 @@ function FeedbackFunnel() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logoContainer}>
-        <Image src="/georgeview.jpeg" alt="Company Logo" width={300} height={100} />
+      <div className={styles.logoContainer} >
+        <img src="/georgeview.jpeg" alt="Company Logo" />
       </div>
       <div className={styles.contentContainer}>
         <AnimatePresence mode="wait">
@@ -53,7 +53,9 @@ function FeedbackFunnel() {
             )}
             {step === 2 &&
               (rating < 4 ? (
-                <div>Thank you for your feedback. We will be in touch.</div>
+                <p className={styles.introText}>
+                  Thank you for your feedback. We will be in touch.
+                </p>
               ) : (
                 <div>
                   <p className={styles.introText}> Thank you for the positive feedback!</p>
@@ -76,7 +78,7 @@ function FeedbackFunnel() {
           </motion.div>
         </AnimatePresence>
       </div>
-    </div>
+    </div >
   );
 }
 
