@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <title>Leave a Review: Georgeview Restaurant</title>
-                <link rel="icon" href="/georgeview.jpeg" />
+                <link rel="icon" href="/icon.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
             </Head>
             <Component {...pageProps} />
